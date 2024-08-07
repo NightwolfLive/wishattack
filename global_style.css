@@ -1,0 +1,273 @@
+/* Scrollbar Start */
+
+/* width */
+::-webkit-scrollbar {
+    background: rgba(255, 255, 255, 0);
+    width: 0px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(102, 102, 102, 0.5); 
+    border-radius: 10px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(102, 102, 102, 0.6); 
+}
+
+
+/* Scrollbar Ende */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100%;
+    background-image: url(Images/WASpawn_Blur.webp);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Navbar, Background */
+    header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+
+    .desktopNav {
+        width: 100%;
+        padding: 8px;
+        background-color: #0c0c0c;
+        display: flex;
+        align-items: center;
+    }
+
+    .desktopNav img {
+        height: 62px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .links a {
+        margin-right: 15px;
+        font-size: 20px;
+        color: #929292;
+        text-decoration: none;
+    }
+
+    .links a:hover {
+        color: #c8c8c8;
+    }
+
+    #here {
+        border-bottom: solid #929292;
+        border-bottom-width: 2px;
+        padding-bottom: 3px;
+    }
+
+    #here:hover {
+        color: #929292;
+    }
+
+    .button {
+        margin-right: 50px;
+        margin-left: auto;
+    }
+
+    .button button {
+        font-size: 16px;
+        padding: 8px;
+        padding-left: 18px;
+        padding-right: 18px;
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+    }
+
+    #joinBtn.disabled {
+        color: #cccccc;
+        background-color: #878787;
+    }
+
+    #joinBtn.enabled {
+        color: #000000;
+        background-color: #54ff64;
+    }
+
+    #joinBtn.enabled:hover {
+        background-color: #7fff7f;
+    }
+
+    #hamburger-icon {
+        margin: auto 0;
+        display: block;
+        cursor: pointer;
+    }
+
+    #hamburger-icon div {
+        width: 35px;
+        height: 3px;
+        background-color: #ffffff;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    .open .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+        transform: rotate(-45deg) translate(-6px, 6px);
+    }
+
+    .open .bar2 {
+        opacity: 0;
+    }
+
+    .open .bar3 {
+        -webkit-transform: rotate(45deg) translate(-6px, -8px);
+        transform: rotate(45deg) translate(-6px, -8px);
+    }
+
+    .open .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .mobile-menu {
+        display: block;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        height: calc(100vh-50px);
+        width: 100%;
+    }
+
+    .mobileNav {
+        display: none;
+    }
+
+
+
+/* Work In Progress */
+    .wip {
+        max-width: 600px;
+        width: 95%;
+        margin: auto;
+        margin-top: 150px;
+        margin-bottom: -8px;
+        padding: 20px;
+        border-radius: 10px;
+        color: #ffffff;
+        background-color: rgba(12, 12, 12, 0.5);
+    }
+
+    .wip h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .wip p {
+        text-align: center;
+    }
+
+
+
+/* Footer */
+    footer {
+        width: 100%;
+        height: 450px;
+        margin-top: 250px;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        flex-direction: row;
+        color: #929292;
+        background-color: #0c0c0c;
+    }
+    
+    .footLogo {
+        height: calc(100% - 30px);
+        width:  25%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .footLogo img {
+        width: 80%;
+    }
+    
+    .social,
+    .footInfo {
+        width: 25%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .socialBox h2,
+    .footInfoBox h2 {
+        margin-top: 100px;
+        margin-bottom: 20px;
+    }
+    
+    .socialBox li,
+    .footInfoBox li {
+        list-style: none;
+        margin-bottom: 10px;
+    }
+    
+    .socialBox a,
+    .footInfoBox a {
+        text-decoration: none;
+        color: #929292;
+        display: flex;
+        align-items: center;
+    }
+    
+    .footInfoBox button {
+        font-size: 16px;
+        margin-top: 20px;
+        padding: 8px;
+        padding-left: 18px;
+        padding-right: 18px;
+        border-radius: 50px;
+        border: none;
+        background-color: #54ff64;
+    }
+    
+    .footInfoBox button:hover {
+        cursor: pointer;
+    }
+    
+    .socialBox a:hover,
+    .footInfoBox a:hover {
+        color: #c8c8c8;
+    }
+    
+    .socialBox img {
+        width: 32px;
+        margin-right: 10px;
+    }
+    
+    .copyright {
+        width: 100%;
+        height: 20px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
