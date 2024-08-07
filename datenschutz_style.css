@@ -1,0 +1,44 @@
+.datenschutz {
+    width: 800px;
+    margin: auto;
+    margin-top: 150px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    background-color: rgba(12, 12, 12, 0.5);
+}
+
+.datenschutz h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.datenschutz a {
+    color: #05b6fc;
+}
+
+.accessdata,
+.personalData,
+.rights,
+.final {
+    margin-top: 25px;
+}
+
+.accessdata h3,
+.personalData h3 {
+    margin-bottom: 5px;
+}
+
+.rights h4 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.accessdata ul,
+.personalData ul {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 35px;
+}

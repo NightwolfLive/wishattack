@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Wish Attack | Registrieren</title>
+    <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+	<link rel="stylesheet" href="global_style.css">
+	<link rel="stylesheet" href="join_style.css">
+	<script type="text/javascript" src="script.js" defer></script>
+	<script async src="https://basicons.xyz/embed.js"></script>
+</head>
+<body>
+    <header>
+        <div class="desktopNav">
+            <a href="index.html"><img src="Images/WA_Logo.webp" alt="Wish Attack"></a>
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="news.html">Neuigkeiten</a>
+                <a href="download.html">Downloads</a>
+                <a href="https://discord.gg/PjAzBjQW3G">Discord</a>
+                <a href="team.html">Server Team</a>
+            </div>
+            <a href="join.html" class="button" id="joinLink">
+                <button id="joinBtn" class="disabled">Registrieren</button>
+            </a>
+        </div>
+        <div class="mobileNav">
+            <div id="hamburger-icon">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+                <ul class="mobile-menu">
+                    <li id="default"><a href="index.html">Home</a></li>
+                    <li id="default"><a href="download.html">Downloads</a></li>
+                    <li id="default"><a href="https://discord.gg/PjAzBjQW3G">Discord</a></li>
+                    <li id="default"><a href="team.html">Server Team</a></li>
+                    <li id="join"><a href="join.html">Teilnehmen</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+	
+	<div class="form">
+		<h2>Teilnahmeformular</h2>
+  		<br><br>
+		<form action="process_form.php" method="post">
+			<label for="playtime">Wie lange spielst du schon Minecraft?</label>
+    		<input  type="text" id="playtime" name="playtime" placeholder="Bsp. 1 Jahr" required><br><br><br>
+    
+			<label for="mcname">Wie lautet dein Minecraft Name?</label>
+			<input type="text" id="mcname" name="mcname" placeholder="Bsp. Nightwolf_live" required><br><br><br>
+
+    		<label for="dcname">Wie lautet dein Discord Name?</label>
+			<input type="text" id="dcname" name="dcname" placeholder="Bsp. nightwolf_live" required><br><br><br>
+
+			<label for="why">Warum solltest du teilnehmen?</label>
+			<textarea id="why" name="why" required></textarea><br><br><br>
+
+			<label for="age">Wie alt bist du?</label>
+			<input type="number" min="0" max="99" onkeypress="return event.charCode >= 48 && event.charCode <= 57" id="age" name="age" placeholder="0-99" required><br><br>
+
+            <div class="privacyCheck">
+                <input type="checkbox" name="privacyPolicy" id="privacyPolicy" required>
+                <p>Ich habe die Datenschutzerklärung gelesen und stimme ihr zu.</p>
+            </div>
+
+			<button class="submit">Absenden</button>
+		</form>
+		<br>
+		<div class="troll">Bitte beachte, dass doppelte und Troll anfragen dierekt abgelehnt werden und zu einem ausschluss aus dem Bewerbungsverfahren führen.</div>
+	</div>
+
+
+
+    <footer>
+        <div class="footLogo">
+            <img src="Images/WA_Logo.webp" alt="Wish Attack Logo">
+        </div>
+        <div class="social">
+            <div class="socialBox">
+                <h2>Socials</h2>
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/wishattackminecraft/" target="_blank">
+                            <img src="Images/instagram.svg" alt="Instagram">
+                            Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@wishattackminecraft" target="_blank">
+                            <img src="Images/youtube.svg" alt="Youtube">
+                            Youtube
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://discord.gg/PjAzBjQW3G" target="_blank">
+                            <img src="Images/discord2.svg" alt="Discord">
+                            Discord
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/wishattackmc" target="_blank">
+                            <img src="Images/x.svg" alt="X">
+                            X (ehemals Twitter)
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footInfo">
+            <div class="footInfoBox">
+                <h2>Informationen</h2>
+                <ul>
+                    <li>
+                        <a href="impressum.html">Impressum</a>
+                    </li>
+                    <li>
+                        <a href="datenschutz.html">Datenschutz</a>
+                    </li>
+                    <li>
+                        <a href="join.html"><button>Registrieren</button></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">© 2019-2024, Wish Attack</div>
+    </footer>
+</body>
+</html>

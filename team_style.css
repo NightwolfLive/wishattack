@@ -1,0 +1,161 @@
+.team {
+    max-width: 1800px;
+    height: auto;
+    margin: auto;
+    margin-top: 150px;
+}
+
+.teamRank {
+    width: 100%;
+    height: auto;
+    margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.title {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.title img {
+    width: 75%;
+}
+
+.user {
+    max-width: 45%;
+    min-width: 810px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(12, 12, 12, 0.5);
+}
+
+.information {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #ededed;
+}
+
+.skin {
+    display: flex;
+    justify-content: center;
+}
+
+.skin img{
+    height: 256px;
+}
+
+.discord {
+    width: 100%;
+    display: flex;
+}
+
+.discord img {
+    width: 18px;
+    margin-right: 5px;
+}
+
+.mail {
+    width: 100%;
+    display: flex;
+}
+
+.mail img {
+    width: 18px;
+    margin-right: 5px;
+}
+
+.about {
+    width: 67%;
+    margin-left: 3%;
+    color: #ededed;
+}
+
+.about h2 {
+    margin-bottom: 7px;
+    text-align: center;
+}
+
+@media(max-width: 1000px) {
+
+    body {
+        background-position: center;
+    }
+
+    .mobileNav {
+        width: 100%;
+        background-color: rgb(12, 12, 12);
+        padding: 2px;
+        display: flex;
+        align-items: center;
+    }
+
+    .mobileNav img {
+        height: 48px;
+    }
+
+    .mobileNav a {
+        margin-left: 8px;
+    }
+
+    .mLinks {
+        margin-right: 20px;
+        margin-left: auto;
+    }
+
+    .mLinks svg {
+        fill: none;
+    }
+
+    .desktopNav {
+        display: none;
+    }
+
+
+
+    .team {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .teamRank {
+        width: 100%;
+        margin-bottom: 80px;
+    }
+
+    .user {
+        max-width: 95%;
+        min-width: 0px;
+        margin-bottom: 20px;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .information {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .discord,
+    .mail {
+        justify-content: center;
+    }
+
+    .about {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+}

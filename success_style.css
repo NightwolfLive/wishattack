@@ -1,0 +1,32 @@
+.success{
+    width: 90%;
+    max-width: 600px;
+    background-color: rgba(25, 25, 25, 0.6);
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 322px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.success h2{
+    text-align: center;
+    color: white;
+    animation: blink 0.5s forwards;
+  }
+  
+  @keyframes blink {
+    0% {
+      color: rgba(96, 255, 66, 1);
+    }
+    100% {
+      color: white;
+    }
+  }
+
+.success p{
+    text-align: center;
+    color: white;
+    
+}
+  
