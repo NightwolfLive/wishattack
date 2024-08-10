@@ -47,4 +47,4 @@ if (date >= startDate && date <= endDate) {
 
   menuButton2.addEventListener("click", closeMenu)
   menuButton1.addEventListener("click", openMenu);
-  window.addEventListener("resize", closeMenu)
+  window.addEventListener("resize", closeMenu);
