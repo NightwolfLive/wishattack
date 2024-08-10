@@ -1,66 +1,50 @@
-// Aktuelles Datum abrufen
-const currentDate = new Date();
+var date = new Date('2024-09-28');
+var startDate = new Date('2024-09-27');
+var endDate = new Date('2024-10-11');
 
-// Start- und Enddatum festlegen
-const startDate = new Date('2024-09-27');
-const endDate = new Date('2024-10-11');
+const joinBtn1 = document.getElementById("joinBtn1");
+const joinBtn2 = document.getElementById("joinBtn2");
+const mobileJoinBtn = document.getElementById("mobileJoinBtn");
+const joinLink1 = document.getElementById("joinLink1");
+const joinLink2 = document.getElementById("joinLink2");
+const mobileJoinLink = document.getElementById("mobileJoinLink");
+const mobileJoinImg = document.getElementById("mobileJoinImg");
 
-// Schaltfläche und Link abrufen
-const joinBtn = document.getElementById('joinBtn');
-const joinLink = document.getElementById('joinLink');
+console.log(date);
 
-// Funktion zum Aktualisieren des Button-Zustands und des Links
-function updateButtonState() {
-    if (currentDate >= startDate && currentDate <= endDate) {
-        joinBtn.classList.remove('disabled');
-        joinBtn.classList.add('enabled');
-        joinLink.href = "join.html";
-    } else {
-        joinBtn.classList.remove('enabled');
-        joinBtn.classList.add('disabled');
-        joinLink.href = "#";
-    }
+if (date >= startDate && date <= endDate) {
+  joinBtn1.classList.remove('disabled');
+  joinBtn2.classList.remove('disabled');
+  mobileJoinBtn.classList.remove('mobileDisabled');
+
+  joinBtn1.classList.add('enabled');
+  joinBtn2.classList.add('enabled');
+  mobileJoinBtn.classList.add('mobileEnabled');
+  
+  joinLink1.href = "join.html"
+  joinLink2.href = "join.html"
+  mobileJoinLink.href = "join.html"
+  mobileJoinImg.src = "Images/icons/join.svg"
 }
-
-// Funktion beim Laden der Seite aufrufen
-updateButtonState();
-
+  
+  
 
 
-// Funktion, um einen zufälligen Index zu generieren
-function getRandomIndex(max) {
-    return Math.floor(Math.random() * max);
+
+  const menuButton1 = document.getElementById("bars");
+  const menuButton2 = document.getElementById("xIcon")
+  const offMenu = document.getElementById("my-menu");
+
+  function openMenu(event){
+    event.target.style.display = "none"
+    offMenu.style.display = "flex"
   }
-  
-  // Array mit den möglichen Bildendungen
-  const imageExtensions = ['png'];
-  
-  // Array, um bereits ausgewählte Bilder zu speichern
-  const usedImages = [];
-  
-  // Funktion, um ein zufälliges, noch nicht ausgewähltes Bild auszuwählen
-  function getRandomImage() {
-    const imageDirectory = 'images/gallery/';
-    const maxImages = 23; // Passe an deine Bildanzahl an
-  
-    let randomImage;
-    do {
-      const randomIndex = getRandomIndex(maxImages) + 1;
-      const randomExtensionIndex = getRandomIndex(imageExtensions.length);
-      const randomExtension = imageExtensions[randomExtensionIndex];
-      randomImage = imageDirectory + randomIndex + '.' + randomExtension;
-    } while (usedImages.includes(randomImage));
-  
-    usedImages.push(randomImage);
-    return randomImage;
+
+  function closeMenu(){
+    offMenu.style.display = "none"
+    menuButton1.style.display = "block"
   }
-  
-  // Hole die beiden Bild-Elemente
-  const imageElement1 = document.getElementById('image1');
-  const imageElement2 = document.getElementById('image2');
-  
-  // Setze die src-Attribute der Bilder auf zufällige Bilder
-  imageElement1.src = getRandomImage();
-  imageElement2.src = getRandomImage();
-  
-  
+
+  menuButton2.addEventListener("click", closeMenu)
+  menuButton1.addEventListener("click", openMenu);
+  window.addEventListener("resize", closeMenu)

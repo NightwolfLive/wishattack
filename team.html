@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <div class="desktopNav">
+        <div class="nav">
             <a href="index.html"><img src="Images/WA_Logo.webp" alt="Wish Attack"></a>
             <div class="links">
                 <a href="index.html">Home</a>
@@ -22,25 +22,59 @@
                 <a href="https://discord.gg/PjAzBjQW3G">Discord</a>
                 <a href="team.html" id="here">Server Team</a>
             </div>
-            <a href="join.html" class="button" id="joinLink">
-                <button id="joinBtn" class="disabled">Registrieren</button>
+            <a href="#" class="button" id="joinLink1">
+                <button id="joinBtn1" class="disabled">Registrieren</button>
             </a>
         </div>
         <div class="mobileNav">
-            <div id="hamburger-icon">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-                <ul class="mobile-menu">
-                    <li id="default"><a href="index.html">Home</a></li>
-                    <li id="default"><a href="download.html">Downloads</a></li>
-                    <li id="default"><a href="https://discord.gg/PjAzBjQW3G">Discord</a></li>
-                    <li id="default"><a href="team.html">Server Team</a></li>
-                    <li id="join"><a href="join.html">Teilnehmen</a></li>
-                </ul>
+            <a href="index.html"><img id="mobileLogo" src="Images/WA_Logo.webp" alt="Wish Attack"></a>
+            <img id="bars" src="Images/bars.svg" alt="">
+        </div>
+
+        <div id="my-menu" class="off-screen-menu">
+            <img id="xIcon" src="Images/xmark.svg" alt="X">
+            <img id="offImg" src="Images/WA_Logo.webp" alt="Wish Attack">
+            <div class="offButtons">
+                <a href="index.html">
+                    <button>
+                        <img src="Images/icons/home.svg" alt="">
+                        Home
+                    </button>
+                </a>
+                <a href="news.html">
+                    <button>
+                        <img src="Images/icons/news.svg" alt="">
+                        Neuigkeiten
+                    </button>
+                </a>
+                <a href="download.html">
+                    <button>
+                        <img src="Images/icons/download.svg" alt="">
+                        Downloads
+                    </button>
+                </a>
+                <a href="https://discord.gg/PjAzBjQW3G">
+                    <button>
+                        <img src="Images/icons/discord.svg" alt="">
+                        Discord
+                    </button>
+                </a>
+                <a href="team.html">
+                    <button>
+                        <img src="Images/icons/serverTeam.svg" alt="">
+                        Server Team
+                    </button>
+                </a>
+                <a id="mobileJoinLink" href="#">
+                    <button id="mobileJoinBtn" class="mobileDisabled">
+                        <img id="mobileJoinImg" src="Images/icons/joinVariant.svg" alt="">
+                        Registrieren
+                    </button>
+                </a>
             </div>
         </div>
     </header>
+
 
 
     <div class="team">
@@ -292,7 +326,9 @@
                         <a href="datenschutz.html">Datenschutz</a>
                     </li>
                     <li>
-                        <a href="join.html"><button>Registrieren</button></a>
+                        <a href="#" id="joinLink2">
+                            <button id="joinBtn2" class="disabled">Registrieren</button>
+                        </a>
                     </li>
                 </ul>
             </div>

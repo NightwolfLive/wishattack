@@ -47,7 +47,7 @@ body {
         top: 0;
     }
 
-    .desktopNav {
+    .nav {
         width: 100%;
         padding: 8px;
         background-color: #0c0c0c;
@@ -55,7 +55,7 @@ body {
         align-items: center;
     }
 
-    .desktopNav img {
+    .nav img {
         height: 62px;
         margin-left: 50px;
         margin-right: 50px;
@@ -97,62 +97,30 @@ body {
         cursor: pointer;
     }
 
-    #joinBtn.disabled {
-        color: #cccccc;
+    #joinBtn1.disabled,
+    #joinBtn2.disabled {
+        color: #aaaaaa;
         background-color: #878787;
     }
 
-    #joinBtn.enabled {
+    #joinBtn1.enabled,
+    #joinBtn2.enabled {
         color: #000000;
         background-color: #54ff64;
     }
 
-    #joinBtn.enabled:hover {
+    #joinBtn1.disabled,
+    #joinBtn2.disabled {
+        cursor: not-allowed;
+    }
+
+    #joinBtn1.enabled:hover,
+    #joinBtn2.enabled:hover {
         background-color: #7fff7f;
     }
 
-    #hamburger-icon {
-        margin: auto 0;
-        display: block;
-        cursor: pointer;
-    }
-
-    #hamburger-icon div {
-        width: 35px;
-        height: 3px;
-        background-color: #ffffff;
-        margin: 6px 0;
-        transition: 0.4s;
-    }
-
-    .open .bar1 {
-        -webkit-transform: rotate(-45deg) translate(-6px, 6px);
-        transform: rotate(-45deg) translate(-6px, 6px);
-    }
-
-    .open .bar2 {
-        opacity: 0;
-    }
-
-    .open .bar3 {
-        -webkit-transform: rotate(45deg) translate(-6px, -8px);
-        transform: rotate(45deg) translate(-6px, -8px);
-    }
-
-    .open .mobile-menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-    }
-
-    .mobile-menu {
-        display: block;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        height: calc(100vh-50px);
-        width: 100%;
+    .off-screen-menu {
+        display: none;
     }
 
     .mobileNav {
@@ -239,14 +207,14 @@ body {
     }
     
     .footInfoBox button {
-        font-size: 16px;
         margin-top: 20px;
+        font-size: 16px;
         padding: 8px;
         padding-left: 18px;
         padding-right: 18px;
         border-radius: 50px;
         border: none;
-        background-color: #54ff64;
+        cursor: pointer;
     }
     
     .footInfoBox button:hover {
@@ -271,3 +239,118 @@ body {
         justify-content: center;
         align-items: center;
     }
+
+
+@media (max-width: 1000px) {
+    .off-screen-menu {
+        height: 100vh;
+        width: 100%;
+        max-width: 450px;
+        font-size: 20px;
+        list-style: none;
+        position: fixed;
+        top: 0;
+        right: 0px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: .3s ease;
+        background-color: rgb(12, 12, 12);
+    }
+
+    #xIcon {
+        position: absolute;
+        width: 24px;
+        top: 40px;
+        right: 20px;
+    }
+
+    #offImg {
+        width: 75%;
+        margin-bottom: 100px;
+    }
+
+    .offButtons {
+        width: 100%;
+    }
+
+    .offButtons a {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    .offButtons button {
+        width: 70%;
+        height: 50px;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: #878787;
+    }
+
+    .offButtons img {
+        width: 25px;
+        margin-right: 10px;
+    }
+
+    .mobileDisabled {
+        color: #aaaaaa;
+        text-decoration: line-through;
+    }
+
+    .mobileEnabled {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .mobileNav {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        background-color: #0c0c0c;
+    }
+
+    .mobileNav #mobileLogo {
+        height: 75px;
+        margin-left: 20px;
+    }
+
+    .mobileNav #bars {
+        width: 24px;
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+
+
+    footer {
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footLogo {
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    .social {
+        width: 100%;
+    }
+
+    .footInfo {
+        width: 100%;
+    }
+}
