@@ -1,4 +1,4 @@
-var date = new Date('2024-09-28');
+var date = new Date();
 var startDate = new Date('2024-09-27');
 var endDate = new Date('2024-10-11');
 
