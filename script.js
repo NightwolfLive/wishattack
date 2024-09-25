@@ -21,9 +21,9 @@ if (date >= startDate && date <= endDate) {
   joinBtn2.classList.add('enabled');
   mobileJoinBtn.classList.add('mobileEnabled');
   
-  joinLink1.href = "join.html"
-  joinLink2.href = "join.html"
-  mobileJoinLink.href = "join.html"
+  joinLink1.href = "register.html"
+  joinLink2.href = "register.html"
+  mobileJoinLink.href = "register.html"
   mobileJoinImg.src = "Images/icons/join.svg"
 }
   
