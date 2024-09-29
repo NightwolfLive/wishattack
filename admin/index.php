@@ -1,31 +1,59 @@
+<?php
+
+$config = parse_ini_file(__DIR__ . "/config.ini", true);
+
+$conn = mysqli_connect(
+    $config["localDatabase"]["hostname"],
+    $config["localDatabase"]["username"],
+    $config["localDatabase"]["password"],
+    $config["localDatabase"]["database"]
+);
+
+if($conn == false){
+    die("Error: Could not connect to Database. "
+        . mysqlli_connect_error());
+}
+
+$username = $_POST["username"];
+$password = $_POST["password"];
+
+$sql = "SELECT * FROM team WHERE username = $username AND password = $password";
+
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("ss", $username, $password);
+
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($result->num_rows > 0) {
+    header("Location: test.html");
+} else {
+    echo "Die Daten stimmen nicht überein.";
+}
+
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wish Attack | Registrieren</title>
+    <title>Wish Attack | PRESET</title>
     <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
-    <link rel="stylesheet" href="global_style.css">
-    <link rel="stylesheet" href="success_style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="">
     <script type="text/javascript" src="script.js" defer></script>
     <script async src="https://basicons.xyz/embed.js"></script>
 </head>
 <body>
     <header>
         <div class="nav">
-            <a href="index.html"><img src="Images/WA_Logo.webp" alt="Wish Attack"></a>
-            <div class="links">
-                <a href="index.html">Home</a>
-                <a href="news.html">Neuigkeiten</a>
-                <a href="download.html">Downloads</a>
-                <a href="https://discord.gg/PjAzBjQW3G">Discord</a>
-                <a href="team.html">Server Team</a>
-            </div>
-            <a href="#" class="button" id="joinLink1">
-                <button id="joinBtn1" class="disabled">Registrieren</button>
-            </a>
+            <img src="images/WA_Logo.webp" alt="Wish Attack Admin Panel">
         </div>
+
+<!--
         <div class="mobileNav">
             <a href="index.html"><img id="mobileLogo" src="Images/WA_Logo.webp" alt="Wish Attack"></a>
             <img id="bars" src="Images/bars.svg" alt="">
@@ -73,18 +101,26 @@
                 </a>
             </div>
         </div>
+-->
     </header>
 
 
 
 
-    <div class="success">
-        <h2>Teilnahme wurde beantragt</h2>
-        <br>
-        <p>
-            Vielen Dank für die Registrierung. <br>
-            Du wirst in kürze von unserem Team über deine Teilnahme informiert.
-        </p>
+    <div class="login">
+        <h1>Admin Login</h1>
+
+        <form action="index.php" method="post">
+            <input type="text" name="username" id="username" placeholder="Benutzername">
+
+            <input type="password" name="password" id="password" placeholder="Passwort">
+            <div class="showPW">
+                <input type="checkbox" onclick="showPW()">
+                <p>Passwort anzeigen</p>
+            </div>
+
+            <button class="loginButton">Einloggen</button>
+        </form>
     </div>
 
 
@@ -133,11 +169,6 @@
                     </li>
                     <li>
                         <a href="datenschutz.html">Datenschutz</a>
-                    </li>
-                    <li>
-                        <a href="#" id="joinLink2">
-                            <button id="joinBtn2" class="disabled">Registrieren</button>
-                        </a>
                     </li>
                 </ul>
             </div>
